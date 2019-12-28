@@ -1,3 +1,4 @@
+#missing numerical data
 import pandas as pd 
 from sklearn.preprocessing import Imputer #depriciated 
 from sklearn.impute import SimpleImputer #new
@@ -12,9 +13,9 @@ y = data.iloc[:,3]
 
 # print("X 1:2", X[:,1:2])
 # print("X 1:3", X[:,1:3])
-Imputer = Imputer(missing_values='NaN', strategy='mean', axis=0)
+# Imputer = Imputer(missing_values='NaN', strategy='mean', axis=0)
 
-# Imputer = SimpleImputer(missing_values='NaN', strategy='mean')
+Imputer = SimpleImputer(strategy='mean')
 Imputer_X = Imputer.fit(X[:,1:3])
 X[:,1:3] = Imputer_X.transform(X[:,1:3])
 # Imputer_X = Imputer.fit_transform(X[:,1:3])
