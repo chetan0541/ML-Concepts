@@ -4,6 +4,7 @@ from sklearn.preprocessing import Imputer #depriciated
 from sklearn.impute import SimpleImputer #new
 
 
+
 data = pd.read_csv("Data.csv")
 
 X = data.iloc[:,:-1].values
